@@ -1,0 +1,9 @@
+@html.extend('layout',function(model){
+
+	@html.block('body',function(model){
+
+        <h3>Error: @model.message</h3>
+    
+    });
+
+})

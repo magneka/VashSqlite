@@ -1,0 +1,22 @@
+@html.extend('layout',function(model){
+
+	@html.block('body',function(model){
+
+        <h3>Please confirm delete customer @model.firstname @model.lastname</h3>
+
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col graybox">
+
+                    <form action="/customers/delete" method="POST">
+
+                            <input type="hidden" name="id" value="@model.id">                                 
+                            <input type="submit" value="Submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+
+                    </form> 
+            
+            </div>            
+         </div>
+        
+    });
+
+})

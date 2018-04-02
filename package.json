@@ -1,0 +1,18 @@
+{
+  "name": "vashsqlite",
+  "version": "1.0.0",
+  "description": "Example app using Vash and Sqlite",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Magne Alvheim",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "promise": "^8.0.1",
+    "sqlite": "^2.9.1",
+    "vash": "^0.12.4"
+  }
+}

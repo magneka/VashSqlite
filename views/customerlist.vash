@@ -1,0 +1,42 @@
+@html.extend('layout',function(model){
+
+	@html.block('body',function(model){
+
+        <div class="mdl-cell mdl-cell--12-col">
+            <div class="docs-text-styling component-title">
+                <h3>Customers</h3>
+                <p>List of registered customers.</p>
+            </div>
+
+            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th class="mdl-data-table__cell--non-numeric">Firstname</th>
+                        <th class="mdl-data-table__cell--non-numeric">Lastname</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @model.customers.forEach(function(m){
+                       
+                        <tr>
+                            <td>                               
+                                <a href="/customers/delete/@m.id"><i class="material-icons">delete</i></a>
+                                <a href="/customers/edit/@m.id"><i class="material-icons">edit</i></a>                            
+                                 @m.id 
+                            </td>
+                            <td class="mdl-data-table__cell--non-numeric">@m.firstname</td>
+                            <td class="mdl-data-table__cell--non-numeric">@m.lastname</td>
+                        </tr>
+
+                    })
+                   
+                </tbody>
+            </table>      
+
+        </div>
+        
+    });
+
+})

@@ -1,0 +1,35 @@
+@html.extend('layout',function(model){
+
+	@html.block('body',function(model){
+
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col graybox">
+
+                    <form action="/customers/edit" method="POST">
+
+                            <input type="hidden" name="id" value="@model.id">
+
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="firstname" name="firstname" value="@model.firstname">
+                                <label class="mdl-textfield__label" for="firstname">Enter firstname.</label>
+                            </div>
+
+
+                            <br>
+                            
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="lastname" name="lastname" value="@model.lastname">
+                                <label class="mdl-textfield__label" for="firstname">Enter lastname.</label>
+                            </div>                            
+                            
+                            <br>            
+                            <input type="submit" value="Submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+
+                    </form> 
+            
+            </div>            
+         </div>
+        
+    });
+
+})
